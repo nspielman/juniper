@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              blank: Please provide a username.
+              wrong_length: Username must be no more than 20 characters.
+            first_name:
+              blank: Please provide a first name.
+              wrong_length: First Name must be no more than 20 characters.
+            last_name:
+              blank: Please provide a last name.
+              wrong_length: Last Name must be no more than 20 characters.
+            password:
+              blank: Please provide a password.
+              invalid: Password Requirements not met. Review the minimum requirements.
+              wrong_length: Password must be no more than 30 characters.
