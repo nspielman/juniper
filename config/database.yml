@@ -17,5 +17,4 @@ test:
   database: juniper_test
 
 production:
-  <<: *default
-  database: juniper_production
+  url: <%= ENV['DATABASE_URL'] %>
