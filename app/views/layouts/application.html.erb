@@ -10,6 +10,7 @@
   <body>
     <%= render partial: "shared/application_header" %>
 
+    <div class="banner banner-fixed banner-page-root"></div>
     <div class="container">
       <% if flash[:error].present? %>
         <div class="alert alert-danger"><%= flash[:error] %></div>
