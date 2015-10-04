@@ -9,8 +9,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bcrypt'
 gem 'therubyracer', "~> 0.11.3", platforms: :ruby
 gem 'jquery-rails'
+gem 'kaminari'
 
 group :development, :test do
+  gem "faker"
   gem "pry-byebug", "~> 1.3.3"
   gem "pry-remote"
   gem "rspec-rails"
