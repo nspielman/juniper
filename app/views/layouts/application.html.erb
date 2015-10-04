@@ -10,16 +10,20 @@
   <body>
     <%= render partial: "shared/application_header" %>
 
-    <div class="banner banner-fixed banner-page-root"></div>
-    <div class="container">
-      <% if flash[:error].present? %>
-        <div class="alert alert-danger"><%= flash[:error] %></div>
-      <% end %>
-      <% if notice %>
-        <div class="alert alert-info"><%= notice %></div>
-      <% end %>
+    <div id="container-wrapper">
+      <div class="banner-cover">
+        <div class="banner banner-fixed banner-page-root"></div>
+      </div>
+      <div class="container">
+        <% if flash[:error].present? %>
+          <div class="alert alert-danger"><%= flash[:error] %></div>
+        <% end %>
+        <% if notice %>
+          <div class="alert alert-info"><%= notice %></div>
+        <% end %>
 
-      <%= yield %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
