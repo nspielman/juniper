@@ -2,7 +2,7 @@
   <div class="article">
     <h2><%= article.title %></h2>
     <div>
-      <%= article.text %>
+      <%= article.text.gsub(/\n/, '<br/>').html_safe if article.text %>
     </div>
     <div class="article-date">
       <%= article.created_at.to_formatted_s(:long_ordinal) %>
