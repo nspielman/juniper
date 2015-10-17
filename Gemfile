@@ -5,6 +5,7 @@ gem 'mysql2', '~> 0.3.18'
 gem 'pg'
 gem 'sass-rails'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 gem 'uglifier', '>= 1.3.0'
 gem 'bcrypt'
 gem 'therubyracer', "~> 0.11.3", platforms: :ruby
