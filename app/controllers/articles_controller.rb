@@ -1,9 +1,9 @@
 class ArticlesController < ApplicationController
-  before_action :signed_in_user, except: [:index, :show]
+  before_action :signed_in_user, except: [:index]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.order("created_at DESC").page params[:page]
+    @articles = Article.unarchived.order("created_at DESC").page params[:page]
   end
 
   def show
@@ -45,6 +45,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :text, :is_archived)
     end
 end
